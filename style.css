@@ -1,0 +1,119 @@
+/* Configurações Gerais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Estilização do Cabeçalho (Header) */
+.header-container {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Título / Logo */
+.header-logo h1 {
+    font-size: 22px;
+    color: #1a252f;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header-logo h1 span {
+    color: #2ecc71; /* Cor de destaque (Verde padrão IFA) */
+    font-weight: 800;
+}
+
+/* Menu de Navegação */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Espaçamento entre os botões */
+}
+
+/* Estilo Base dos Botões de Encaminhamento */
+.header-nav .nav-btn {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Botão 1 - Programação (Tom Azul) */
+.btn-prog {
+    background-color: #ebf5ff;
+    color: #0070f3;
+    border: 1px solid #d0e7ff;
+}
+
+.btn-prog:hover {
+    background-color: #0070f3;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 112, 243, 0.2);
+}
+
+/* Botão 2 - Robótica (Tom Laranja/Coral) */
+.btn-robo {
+    background-color: #fff3eb;
+    color: #e67e22;
+    border: 1px solid #ffe3d0;
+}
+
+.btn-robo:hover {
+    background-color: #e67e22;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(230, 126, 34, 0.2);
+}
+
+/* Botão 3 - Física e Tecnociência (Tom Roxo) */
+.btn-fis {
+    background-color: #f3ebff;
+    color: #8e44ad;
+    border: 1px solid #ebd0ff;
+}
+
+.btn-fis:hover {
+    background-color: #8e44ad;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(142, 68, 173, 0.2);
+}
+
+/* Responsividade: Ajuste para telas menores (Celulares) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .header-nav .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
